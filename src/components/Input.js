@@ -1,10 +1,11 @@
 import React, {useRef} from 'react'
-import useStore from '../store';
+import {usePeoplesStore} from '../store';
 const Input = () => {
     const inputRef = useRef();
-    const addPerson = useStore(state => state.addPerson)
+    const addPerson = usePeoplesStore(state => state.addPerson)
     const add = () =>{
-        addPerson(inputRef.current.value)
+        addPerson(inputRef.current.value);
+        inputRef.current.value = ''
     }
   return (
     <div>
