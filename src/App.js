@@ -1,8 +1,15 @@
 import React from 'react'
+import People from './components/People'
+import Input from './components/Input'
+
 
 const App = () => {
   return (
-    <div>App</div>
+    <div className="App">
+      <p>People</p>
+      <Input />
+      <People />
+    </div>
   )
 }
 
